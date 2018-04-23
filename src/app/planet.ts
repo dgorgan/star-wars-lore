@@ -1,4 +1,4 @@
-export class Planet {  
+export class Planet {
   name: string,
   climate: string,
   gravity: string,

@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Poller+One');
+
 /* CSS Reset */
 html,
 body {
@@ -16,6 +18,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  font-family: 'Poller One', cursive;
+  background: url("assets/img/background-stars.jpg");
 }
 ol, ul {
 	list-style: none;
@@ -34,8 +38,6 @@ table {
 }
 
 
-
-
 h1 {
   margin: 0;
   padding: 16px;
@@ -43,6 +45,27 @@ h1 {
   color: #fff;
 }
 
-img {
-  margin: 16px;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+  padding: 0.70rem 0;
+  border-radius: 2px;
+  background-color: #464646;
+  font-family: "omnes-pro",sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .3s;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background-color: #6c6c6c;
 }

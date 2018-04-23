@@ -6,18 +6,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PlanetsService } from './planets.service';
 import { PlanetsComponent } from './planets/planets.component';
+import { PlanetDetailComponent } from './planet-detail/planet-detail.component';
 
 const appRoutes: Routes = [
-  // { path: 'planet/:name',      component: PlanetDetailComponent },
-  {
-    path: 'planets',
-    component: PlanetsComponent,
-    data: { title: 'Planets List' }
-  },
-  { path: '',
-    redirectTo: '/planets',
-    pathMatch: 'full'
-  },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  // { path: 'dashboard', component: DashboardComponent },
+  { path: 'planets/:name', component: PlanetDetailComponent },
+  { path: 'planets', component: PlanetsComponent }
   // { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -25,7 +20,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    PlanetDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -38,4 +34,5 @@ const appRoutes: Routes = [
   providers: [PlanetsService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

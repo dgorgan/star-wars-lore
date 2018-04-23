@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,9 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  author = 'Dumitru Gorgan';
 
- constructor() {
+ constructor() {}
 
- }
-
- ngOnInit() {
-
- }
+ ngOnInit() {}
 
 }

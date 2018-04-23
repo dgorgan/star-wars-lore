@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 import { Planet } from '../planet'
 import { PlanetsService } from '../planets.service';
-import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-planets',
@@ -21,7 +22,7 @@ export class PlanetsComponent implements OnInit {
     this.planetsService.getPlanets()
         .subscribe(data => {
           this.planets = data;
-          console.log("Planets: ", this.planets);
+          console.table(this.planets);
         });
   }
 
