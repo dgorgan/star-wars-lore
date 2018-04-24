@@ -4,15 +4,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { PlanetsService } from './planets.service';
 import { PlanetsComponent } from './planets/planets.component';
 import { PlanetDetailComponent } from './planet-detail/planet-detail.component';
+import { CharactersService } from './characters.service';
+import { CharactersComponent } from './characters/characters.component';
+import { CharacterDetailComponent } from './character-detail/character-detail.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  // { path: 'dashboard', component: DashboardComponent },
-  { path: 'planets/:name', component: PlanetDetailComponent },
+  { path: '', component: HomeComponent },
   { path: 'planets', component: PlanetsComponent }
+  { path: 'planets/:name', component: PlanetDetailComponent },
+  { path: 'characters', component: CharactersComponent }
+  { path: 'characters/:name', component: CharacterDetailComponent }
   // { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -21,7 +26,10 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     PlanetsComponent,
-    PlanetDetailComponent
+    PlanetDetailComponent,
+    HomeComponent,
+    CharactersComponent,
+    CharacterDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [PlanetsService],
+  providers: [PlanetsService, CharactersService],
   bootstrap: [AppComponent]
 })
 

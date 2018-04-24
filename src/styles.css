@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Poller+One');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 
 /* CSS Reset */
 html,
@@ -17,8 +19,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
-  font-family: 'Poller One', cursive;
+  color: #fff;
+  line-height: 1;
+  font-family: 'Raleway', sans-serif;
   background: url("assets/img/background-stars.jpg");
 }
 ol, ul {
@@ -37,12 +40,22 @@ table {
 	border-spacing: 0;
 }
 
+h1,
+h2 {
+  font-family: 'Poller One', cursive;
+}
 
 h1 {
   margin: 0;
   padding: 16px;
   background: #488eb5;
   color: #fff;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+h1:hover {
+  transform: scale(1.01);
 }
 
 .btn {
@@ -50,13 +63,14 @@ h1 {
   align-items: center;
   justify-content: center;
   min-width: 250px;
-  padding: 0.70rem 0;
+  padding: 12px 0;
+  margin: 16px 16px 52px;
   border-radius: 2px;
   background-color: #464646;
   font-family: "omnes-pro",sans-serif;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.625rem;
+  line-height: 26px;
   text-decoration: none;
   color: #fff;
   cursor: pointer;

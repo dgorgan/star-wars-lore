@@ -4,19 +4,19 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { Planet } from './planet';
+import { Character } from './character';
 
 @Injectable()
-export class PlanetsService {
+export class CharactersService {
 
-  url = 'https://swapi.co/api/planets/';
+  url = 'https://swapi.co/api/people/';
 
   constructor(private http: HttpClient) {
 
   }
 
-  getPlanets() : Observable<Planet[]> {
-    return this.http.get<Planet[]>(this.url)
+  getCharacters() : Observable<Character[]> {
+    return this.http.get<Character[]>(this.url)
                .map(data => data.results);
   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Planet } from '../planet'
 import { PlanetsService } from '../planets.service';
@@ -13,16 +12,18 @@ import { PlanetsService } from '../planets.service';
 export class PlanetsComponent implements OnInit {
 
   planets: any[];
+  planetImg: string;
 
-  constructor(private planetsService: PlanetsService) {
+  constructor(private planetsService: PlanetsService  ) {
 
   }
 
   ngOnInit() {
     this.planetsService.getPlanets()
-        .subscribe(data => {
-          this.planets = data;
-          console.table(this.planets);
+        .subscribe(planet => {
+          this.planets = planet;
+          this.planetImg = planet.name;
+          console.table(this.planets);        
         });
   }
 
