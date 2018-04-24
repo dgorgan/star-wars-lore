@@ -15,7 +15,7 @@ import { PlanetsService }  from '../planets.service';
 export class PlanetDetailComponent implements OnInit {
 
   planet: any;
-  planetImg: string;
+  // planetImg: any;
 
   constructor(
     private planetsService: PlanetsService,
@@ -27,12 +27,12 @@ export class PlanetDetailComponent implements OnInit {
   ngOnInit() {
     const name = this.route.snapshot.paramMap.get('name');
 
-    this.planetsService.getPlanets(name)
+    this.planetsService.getPlanets()
         .subscribe(data => {
           data.forEach(planet => {
             if (planet.name === name) {
               this.planet = planet;
-              this.planetImg = this.urlSerializer.parse(planet.name);
+              // this.planetImg = this.urlSerializer.parse(planet.name);
             }
           });
         });

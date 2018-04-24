@@ -14,9 +14,9 @@ import { CharacterDetailComponent } from './character-detail/character-detail.co
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'planets', component: PlanetsComponent }
+  { path: 'planets', component: PlanetsComponent },
   { path: 'planets/:name', component: PlanetDetailComponent },
-  { path: 'characters', component: CharactersComponent }
+  { path: 'characters', component: CharactersComponent },
   { path: 'characters/:name', component: CharacterDetailComponent }
   // { path: '**', component: PageNotFoundComponent }
 ];

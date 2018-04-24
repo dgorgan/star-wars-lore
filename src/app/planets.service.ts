@@ -17,6 +17,6 @@ export class PlanetsService {
 
   getPlanets() : Observable<Planet[]> {
     return this.http.get<Planet[]>(this.url)
-               .map(data => data.results);
+               .map(data => data["results"]);
   }
 }

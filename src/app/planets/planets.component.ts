@@ -12,7 +12,7 @@ import { PlanetsService } from '../planets.service';
 export class PlanetsComponent implements OnInit {
 
   planets: any[];
-  planetImg: string;
+  // planetImg: any;
 
   constructor(private planetsService: PlanetsService  ) {
 
@@ -22,12 +22,12 @@ export class PlanetsComponent implements OnInit {
     this.planetsService.getPlanets()
         .subscribe(planet => {
           this.planets = planet;
-          this.planetImg = planet.name;
-          console.table(this.planets);        
+          // this.planetImg = planet.name;
+          console.table(this.planets);
         });
   }
 
   onSelect(planet) {
-    console.log("Selected Planet", this.planets[planet]);
+    // console.log("Selected Planet", this.planets[planet]);
   }
 }

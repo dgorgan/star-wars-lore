@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { Character } from '../characters';
+import { Character } from '../character';
 import { CharactersService } from '../characters.service';
 
 @Component({
@@ -19,14 +19,14 @@ export class CharactersComponent implements OnInit {
 
   ngOnInit() {
     this.charactersService.getCharacters()
-        .subscribe(data => {          
+        .subscribe(data => {
           this.characters = data;
           console.table(this.characters);
         });
   }
 
   onSelect(planet) {
-    console.log("Selected Character", this.characters[character]);
+    // console.log("Selected Character", this.characters[character]);
   }
 
 }

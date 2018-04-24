@@ -17,6 +17,6 @@ export class CharactersService {
 
   getCharacters() : Observable<Character[]> {
     return this.http.get<Character[]>(this.url)
-               .map(data => data.results);
+               .map(data => data["results"]);
   }
 }
