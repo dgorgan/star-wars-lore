@@ -33,3 +33,11 @@ nav a:after {
 nav a:hover {
   transform: scale(1);
 }
+
+@media (max-width: 768px) {
+  nav {
+    grid-template-columns: 100vw;
+    text-align: center;
+    grid-template-rows: 250px 250px;
+  }
+}

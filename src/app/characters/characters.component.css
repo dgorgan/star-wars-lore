@@ -42,3 +42,9 @@
   width: 100%;
   opacity: 1;
 }
+
+@media (max-width: 1024px) {
+  .character {
+    width: 85%;
+  }
+}
