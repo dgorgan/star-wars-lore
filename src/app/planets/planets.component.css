@@ -26,6 +26,10 @@
   margin-right: 12px;
 }
 
+.planet-icon {
+  border-radius: 50%;
+}
+
 .planet:after {
   content: "";
   position: absolute;
